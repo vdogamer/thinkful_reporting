@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # get 'users/index'
   match '/users', to: 'users#index', via: 'get'
   match '/users/id', to: 'users#show', via: 'get'
+  match '/users/sign_out', to: 'devise/sessions#destroy', via: 'delete'
 
   devise_for :admins, :controllers => { :registrations => "registrations"}
   devise_for :users, :controllers => { :registrations => "registrations"}  
