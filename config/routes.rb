@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   devise_for :admins, :controllers => { :registrations => "registrations"}
   devise_for :users, :controllers => { :registrations => "registrations"} 
   devise_for :home
-  resources :users  
+  resources :users 
+  resources :admins
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
