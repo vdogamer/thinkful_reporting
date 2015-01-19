@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :reports, through: :roles
+  has_one :role
+  
   rolify
   attr_accessor :login
   
