@@ -27,6 +27,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'devise'
+gem 'rolify'
+gem 'authority'
+gem 'cancancan'
+
 
 group :production do
   gem 'rails_12factor'

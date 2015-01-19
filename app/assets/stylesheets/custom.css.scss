@@ -1,4 +1,21 @@
 /*flash*/
+
+.home {
+  border: 2px solid;
+  border-radius: 5px;
+  width: 350px;
+  height: 150px;
+  box-shadow: 10px 10px 10px #888888;
+  background-color: gray;
+  color:white;
+  text-shadow: 2px 2px black;
+  margin-left: 20px;
+  text-align: center;
+  font-family: "Trebuchet MS, Helvetica, sans-serif";
+  font-weight: bold;
+    
+}
+
 .alert-error {
     background-color: #f2dede;
     border-color: #eed3d7;

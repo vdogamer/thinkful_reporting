@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  rolify
   attr_accessor :login
   
   validates :username, presence: true, length: {maximum: 255}, uniqueness: { case_sensitive: false }, format: { with: /\A[a-zA-Z0-9]*\z/,                message: "may only contain letters and numbers." }
