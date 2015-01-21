@@ -1,3 +1,24 @@
 <div class="container">
-  <h1>This is the show page!!!</h1>
+  <h1>Request for a report:</h1>
+  <%= form_for @users do |f| %>
+  <div>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+  
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  
+  <div>
+    <%= f.label :request %>
+    <%= f.text_area :request %>
+  </div>
+  
+  <div>
+    <%= f.submit %>
+  </div>
+  <% end %>
+ 
 </div>

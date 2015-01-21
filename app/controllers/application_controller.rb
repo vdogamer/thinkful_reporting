@@ -24,7 +24,8 @@ class ApplicationController < ActionController::Base
     request.referrer
   end
       
-      def admin?
-        user.admin
-      end
+      # My poor attempt at detecting whether the current user is an admin.
+      # def admin?
+      #  user.admin
+      # end
 end
