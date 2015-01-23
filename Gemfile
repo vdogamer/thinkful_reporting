@@ -30,6 +30,7 @@ gem 'devise'
 # gem 'rolify'
 gem 'authority'
 gem 'cancancan'
+gem 'simple_form'
 
 
 group :production do

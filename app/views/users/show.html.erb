@@ -1,4 +1,32 @@
-<div class="container">
+<div class="form-group">
   <h1>Request for a report:</h1>
-  
+  <% if @users.admin? %> 
+    <% @user.each do |person| %>
+      <%= person.id %><br />
+      <%= person.username %><br />
+      <%= person.email %><br />
+      <%= person.admin %><br /><br />
+      <%= person.request %><br /><br />
+    <% end %>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <%= simple_form_for @users do |f| %>
+      
+        <%= f.label :username %>
+        <%= f.text_field :username, class: 'form-control' %>
+      
+        <%= f.label :email %>
+        <%= f.text_field :email, class: 'form-control' %>
+      
+        <%= f.label :request %>
+        <%= f.text_area :request, class: 'form-control' %>
+      
+      
+        <%= f.submit "Submit Form", class: "btn btn-primary" %>
+      
+   <% end %>
+  </div>
 </div>

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
  # before_filter :authenticate_admin!, :except => [:show]
+  before_filter :authenticate_user!
   
   def new 
     @user = User.new
@@ -10,8 +11,11 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find_by_username(:username)
-    puts @user
+    @user = User.all
+    @users = User.find(current_user.id)    
+  end
+  
+  def update
   end
   
 end

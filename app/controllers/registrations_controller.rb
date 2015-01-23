@@ -1,5 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
   #before_filter :authenticate_admin!
+  before_filter :authenticate_user!
+  
   def update
     new_params = params.require(:user).permit(:email, :username, :current_password, :password, :password_confirmation)
     change_password = true
