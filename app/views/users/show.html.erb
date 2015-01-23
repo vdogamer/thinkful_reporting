@@ -16,13 +16,13 @@
   <%= simple_form_for @users do |f| %>
       
         <%= f.label :username %>
-        <%= f.text_field :username, class: 'form-control' %>
+        <%= f.text_field :username, class: 'form-control' %><br />
       
         <%= f.label :email %>
-        <%= f.text_field :email, class: 'form-control' %>
+        <%= f.text_field :email, class: 'form-control' %><br />
       
         <%= f.label :request %>
-        <%= f.text_area :request, class: 'form-control' %>
+        <%= f.text_area :request, class: 'form-control' %><br />
       
       
         <%= f.submit "Submit Form", class: "btn btn-primary" %>
