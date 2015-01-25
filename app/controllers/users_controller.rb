@@ -16,8 +16,11 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user = User.find(current_user.id)
-    @user.update(user_params)
+    @user.update(user_params)    
+    respond_with(@user)
+    
+    # @report_request.update(report_request_params)
+    # respond_with(@report_request)
   end
   
   def user_params

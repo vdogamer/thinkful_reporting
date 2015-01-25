@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :report_requests
+
   # get 'users/index'
   
 
